@@ -1,0 +1,48 @@
+<div class="elanis">
+  <form #loginForm="ngForm" (ngSubmit)="printMessage(loginForm,$event)">
+    <h1>Template Driven Forms</h1>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput
+             [(ngModel)]="val.name"
+             #name="ngModel"
+             name="name"
+             placeholder="Name"
+             required>
+
+      <mat-error>The email is mandatory</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput
+             [(ngModel)]="val.password"
+             #password="ngModel"
+             name="password"
+             placeholder="Password"
+             required>
+
+      <mat-error>The email is mandatory</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput
+             [(ngModel)]="val.email"
+             #email="ngModel"
+             name="email"
+             placeholder="Email"
+             required>
+      <mat-error>The email is mandatory</mat-error>
+    </mat-form-field>
+
+    <button style="width:80px; height:50px; margin:0 auto;" type="submit">Submit</button>
+  </form>
+  <div style="padding-top:50px">
+    {{loginForm.value | json}}
+  </div>
+
+  <app-home-button></app-home-button>
+
+</div>

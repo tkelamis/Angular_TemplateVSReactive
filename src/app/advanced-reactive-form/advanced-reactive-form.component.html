@@ -1,0 +1,44 @@
+
+<div class="container">
+  <h2 style="display:inline-block; padding:30px">Advanced Reactive Form</h2>
+  <!--<button mat-raised-button id="toggle-linear">
+  </button>-->
+  <mat-stepper #stepper>
+    <mat-step>
+      <form>
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <app-form1></app-form1>
+        <div>
+          <button mat-button matStepperNext>Continue to step 2</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step label="Fill out your address">
+      <form>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button>Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+
+  
+
+</div>
+
+<app-home-button></app-home-button>
+

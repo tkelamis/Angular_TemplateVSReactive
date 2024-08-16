@@ -1,0 +1,46 @@
+<div class="elanis">
+
+  <h1>Reactive Forms</h1>
+  <form [formGroup]="form">
+
+    <mat-form-field appearance="fill">
+      <mat-label>Name</mat-label>
+      <input matInput
+             formControlName="name"
+             name="name"
+             placeholder="Name">
+
+      <mat-error>The name is mandatory</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput
+             name="password"
+             formControlName="password"
+             placeholder="Password">
+
+      <mat-error>The password is mandatory</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput
+             name="email"
+             formControlName="email"
+             placeholder="Email">
+      <mat-error>The email is mandatory</mat-error>
+    </mat-form-field>
+
+    <button style="width:80px; height:50px; margin:0 auto;" type="submit" (click)="showMessage(form)">Submit</button>
+  </form>
+  <div style="padding-top:50px">
+  </div>
+
+  <div>
+    {{form.value | json}}
+  </div>
+
+  <app-home-button></app-home-button>
+
+</div>
