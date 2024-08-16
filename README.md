@@ -1,4 +1,4 @@
-# Practise
+# Angular's Template Driven and Reactive Forms
 
 This project demonstrates the differences of a simple sign up form in which a template-driven approach is used than the same form with the use of reactive form functionality. It was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
 
